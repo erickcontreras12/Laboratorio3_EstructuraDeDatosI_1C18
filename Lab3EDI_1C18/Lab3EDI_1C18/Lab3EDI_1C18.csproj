@@ -148,9 +148,11 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CargaPartidoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PartidoController.cs" />
     <Compile Include="DBContext\DefaultConnection.cs" />
+    <Compile Include="DBContext\JsonConnection.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -199,6 +201,17 @@
     <Content Include="Views\Partido\IndexPorFecha.cshtml" />
     <Content Include="Views\Partido\IndexPorNumero.cshtml" />
     <Content Include="Views\Partido\Create.cshtml" />
+    <Content Include="Views\CargaPartido\Create.cshtml" />
+    <Content Include="Views\CargaPartido\IndexInFecha.cshtml" />
+    <Content Include="Views\CargaPartido\IndexInNoPartido.cshtml" />
+    <Content Include="Views\CargaPartido\Delete.cshtml" />
+    <Content Include="Views\CargaPartido\Delete1.cshtml" />
+    <Content Include="Views\Partido\Delete.cshtml" />
+    <Content Include="Views\Partido\Delete1.cshtml" />
+    <Content Include="Views\CargaPartido\Buscar.cshtml" />
+    <Content Include="Views\CargaPartido\Buscar1.cshtml" />
+    <Content Include="Views\Partido\Buscar.cshtml" />
+    <Content Include="Views\Partido\Buscar1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

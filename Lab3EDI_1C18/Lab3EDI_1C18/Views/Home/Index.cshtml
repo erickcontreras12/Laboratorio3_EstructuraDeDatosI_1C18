@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "Laboratorio 3";
 }
 
 <div class="jumbotron">
@@ -13,15 +13,16 @@
         <h2>Insertar datos manuales</h2>
         <p>@Html.ActionLink("Insertar por numero", "Create", "Partido")</p>
         <p>@Html.ActionLink("Insertar por fecha", "Create", "Partido")</p>
+        <h2>Insertar datos Json</h2>
+        <p>@Html.ActionLink("Insertar por Json", "Create", "CargaPartido")</p>
+        
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Mostrar Recorridos En Orden</h2>
+        <p>@Html.ActionLink("Numeros Partido", "IndexPorNumero", "Partido")</p>
+        <p>@Html.ActionLink("Fecha Partido", "IndexPorFecha", "Partido")</p>
+        <p>@Html.ActionLink("Numeros Partido Json", "IndexInNoPartido", "CargaPartido")</p>
+        <p>@Html.ActionLink("Fecha Partido Json", "IndexInFecha", "CargaPartido")</p>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+    
 </div>

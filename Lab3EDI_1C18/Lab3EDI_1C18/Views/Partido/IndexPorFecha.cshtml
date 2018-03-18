@@ -6,6 +6,13 @@
 
 <h2>IndexPorFecha</h2>
 
+@using (Html.BeginForm("Buscar1", "Partido", FormMethod.Get, new { enctype = "multipart/form-data" }))
+{
+    <h2>Buscar unicamente por fecha (MMddyyyy o 01012018) no poner ningun separador en las fechas</h2>
+    @Html.TextBox("id")
+    <input type="submit" name="id" value="Buscar Fecha" />
+}
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -52,10 +59,8 @@
         <td>
             @Html.DisplayFor(modelItem => item.Estadio)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        <td>            
+            @Html.ActionLink("Delete", "Delete", new { id=item.FechaPartido })
         </td>
     </tr>
 }

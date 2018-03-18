@@ -15,6 +15,7 @@ namespace TDA.Clases
         private int size;
         private int cont;
         private int altura;
+        public bool hizoEquilibrio = false;
 
         public ArbolAVL()
         {
@@ -91,7 +92,7 @@ namespace TDA.Clases
                 Nodo<T> siguiente = raiz;
                 K llaveInsertar = this.FuncionObtenerLlave(dato);
                 bool yaInsertado = false;
-
+                hizoEquilibrio = false;
                 while (!yaInsertado)
                 {
                     K llaveSiguiente = this.FuncionObtenerLlave(siguiente.valor);
@@ -101,7 +102,8 @@ namespace TDA.Clases
 
                     if (comparacion == 0)
                     {
-                        throw new Exception("El dato ingresado posee una llave que ya existe en la estructura");
+                        //  throw new Exception("El dato ingresado posee una llave que ya existe en la estructura");
+                        yaInsertado = true;
                     }
                     else
                     {
@@ -167,6 +169,7 @@ namespace TDA.Clases
                         RotacionIzquierda(aux.izquierdo);
                     }
                     RotacionDerecha(aux);
+                    hizoEquilibrio = true;
                 }
                 else if (aux.factor > 1)
                 {
@@ -175,11 +178,12 @@ namespace TDA.Clases
                         RotacionDerecha(aux.derecho);
                     }
                     RotacionIzquierda(aux);
+                    hizoEquilibrio = true;
                 }
-
 
                 aux = aux.Padre;
             }
+            
         }
 
         public void RotacionDerecha(Nodo<T> nodo)
@@ -382,7 +386,7 @@ namespace TDA.Clases
                 Nodo<T> padre = null;
                 bool Esizquierdo = false;
                 bool encontrado = false;
-
+                hizoEquilibrio = false;
                 while (!encontrado)
                 {
                     K llaveSiguiente = this.FuncionObtenerLlave(siguiente.valor);
